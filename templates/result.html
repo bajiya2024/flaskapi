@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShowTableData</title>
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+	<table border-collapse=collapse border=1 class="border_section">
+	<tr>
+	<th>Name</th>
+	<th>Full_name</th>
+	<th>Language</th>
+	<th>Forks_count</th>
+	<th>Description</th>
+	</tr>
+	{% for item in data %}
+	<tr>
+	<td>{{item.name}}</td>
+	<td>{{item.full_name}}</td>
+	<td>{{item.language}}</td>
+	<td>{{item.forks_count}}</td>
+	<td>{{item.description}}</td>
+	<tr>
+		
+	{% endfor %}
+   
+
+
+</table>
+</body>
+</html>
+
+
